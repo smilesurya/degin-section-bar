@@ -1,0 +1,34 @@
+$gender:kids;
+@if($gender==male){
+    .gender{
+        color:red;
+    }
+}
+@else if($gender==female){
+   .gender {
+    color:green;
+
+    }
+}
+@else if($gender==kids){
+    .gender{
+        color:pink;
+    }
+}@else{
+    .gender{
+        color:gray
+    }
+}
+//-----------------
+$color:(
+    "rd":red,
+    "bl":blue,
+    "gn":green,
+    
+);
+@each $key,$val in $color{
+
+    .#{$key}{
+        color:$val;
+    }
+}
